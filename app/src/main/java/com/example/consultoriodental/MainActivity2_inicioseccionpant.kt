@@ -1,7 +1,9 @@
 package com.example.consultoriodental
-
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
+import android.widget.Button
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -43,6 +45,14 @@ class MainActivity2_inicioseccionpant : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
+        val btnLink = findViewById<Button>(R.id.btnLinkss)
+        btnLink.setOnClickListener {
+            val url = "https://maps.app.goo.gl/k2mPrMiytPiWDhjQA" // URL del enlace
+            val openUrlIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(openUrlIntent)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -55,5 +65,8 @@ class MainActivity2_inicioseccionpant : AppCompatActivity() {
         val navController =
             findNavController(R.id.nav_host_fragment_content_main_activity2_inicioseccionpant)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+
     }
+
 }
+
