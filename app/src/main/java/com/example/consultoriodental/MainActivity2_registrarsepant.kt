@@ -24,6 +24,7 @@ lateinit var lista:TextView
     lateinit var registrar: Button
     lateinit var mostrar:Button
 
+    lateinit var  codborrado:TextView
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,8 +71,11 @@ lista.append("CI: "+ datosl.get(i).ci.toString()+" Nombre: "+ datosl.get(i).nomb
 
     }
 
-   // fun borrardatos(view:View){
-    //    var db=miSQLITEhelper(this)
-      //  if(ci)
+    //@SuppressLint("SuspiciousIndentation")
+    //fun borrardatos(view:View){
+      //var db=miSQLITEhelper(this)
+        //if(codborrado.text.toString()){
+          //  db.borrardatos(codborrado.text.toString())
+        //}
     //}
 }

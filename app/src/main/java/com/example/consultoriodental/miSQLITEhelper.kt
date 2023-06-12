@@ -73,10 +73,10 @@ val db=writableDatabase
             }
     }
 
-    fun borrardatos(ci:String){
+    fun borrardatos(codigo:String){
         val db=writableDatabase
-        if(ci.length>0){
-db.delete("Usuario","ci=?", arrayOf(ci))
+        if(codigo.length>0){
+db.delete("Usuario","ci=?", arrayOf(codigo))
         }
     }
 
