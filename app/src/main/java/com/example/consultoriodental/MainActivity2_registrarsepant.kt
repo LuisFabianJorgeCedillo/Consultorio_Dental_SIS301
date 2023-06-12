@@ -64,8 +64,8 @@ fun creardatos(view: View) {
 
            var datosl= db.traerdatos()
             for(i in 0..datosl.size-1){
-lista.append(datosl.get(i).ci.toString()+" "+ datosl.get(i).nombre
-        +datosl.get(i).apellido+" "+datosl.get(i).email+" "+datosl.get(i)+"\n")
+lista.append("CI: "+ datosl.get(i).ci.toString()+" Nombre: "+ datosl.get(i).nombre+
+    " Apellido: " +datosl.get(i).apellido+" Email: "+datosl.get(i).email+" contrasenia: "+datosl.get(i).contrasenia+"\n")
             }
 
     }
